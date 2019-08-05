@@ -1,0 +1,72 @@
+@import url(my_reset.css);
+
+/* --------  common elements  ------- */
+body{
+   font-family: 'Roboto', sans-serif;
+   background: #E5E5E5;
+}
+.Main_title{
+   font-size: 21px;
+   letter-spacing: 1px;
+}
+.sub_title{
+   font-size: 21px;
+   font-weight: 500;
+}
+a{
+   color:#3F539C;
+   text-decoration:  none;
+}
+/* --------  Main page ------- */
+.main_header{
+   position: fixed;
+   top:0;
+   left:0;
+   right:0;
+   z-index: 1;
+}
+.header_inner{
+   height:75px;
+   background: linear-gradient(#DD5E46,#B34C39);
+   padding: 0 15PX;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+.main_header svg{
+   color:#fff;
+}
+.main_header h1{
+   color:#fff;  
+}
+.main_header form{
+   display: none;
+   position: absolute;
+   top:0;
+   left:0;
+   right:0;
+   padding:10px 15px;
+   background: rgba(0,0,0,.7);
+   display: flex;
+   justify-content: space-between;
+   z-index: -1;
+   transition:0.5s ease-in-out;
+}
+.main_header form.active{
+   top:100%;
+}
+.main_header form input{
+   line-height: 27px;
+   width: calc(100% - 40px);
+   border-radius: 4px;
+}
+.main_header form button{
+   background: none;
+   border:none;
+   font-size: 21px;
+}
+/* --------  aside ------- */
+
+/* --------  category ------- */ 
+
+/* --------- details  ---------- */
