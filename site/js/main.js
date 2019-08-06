@@ -13,5 +13,16 @@ $(function(){
     
    });
 
+$('.fa-bars').click(function(){
+   $('body').addClass('aside_open');
+});
+
+$('.aside_bg').click(function(){
+   $('body').removeClass('aside_open');
+});
+
+
+
+
 });
 

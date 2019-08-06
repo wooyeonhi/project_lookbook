@@ -105,12 +105,41 @@ main{
    opacity: 1;
 }
 /* --------  Main page ------- */
+/* .main_header{
+   transform: translateX(0%);
+   transition: 0.4s ease-in;
+}
+.aside_open .main_header{
+   transform: translateX(85%);
+}
+ main{
+   transform: translateX(0%);
+   transition: 0.4s ease-in;
+}
+.aside_open main{
+   transform: translateX(85%);
+} */
+body{
+   position: fixed; 
+   left:0;
+   transition: 0.4s ease-in;
+}
+body.aside_open{
+   left:85%;
+   position: fixed;
+}
+body.aside_open .main_header{
+   left:85%;
+   right:-85%;
+
+}
 .main_header{
    position: fixed;
    top:0;
    left:0;
    right:0;
    z-index: 1;
+   transition: 0.4s ease-in;
 }
 .header_inner{
    height:75px;
@@ -153,6 +182,102 @@ main{
    font-size: 21px;
 }
 /* --------  aside ------- */
+.aside_bg{
+   top:0;
+   left:0;
+   bottom:0;
+   right:0;
+   visibility: hidden;
+   opacity:0;
+   background:rgba(0,0,0,.7);
+   position:fixed;
+   z-index: 2;
+   transition: 0.3s;
+}
+.aside_open .aside_bg{
+   visibility: visible;
+   opacity: 1;
+}
+aside{
+   width: 85%;
+   position: fixed;
+   left:-100%;
+   top:0;
+   height:100vh;
+   background: #3f539c;
+   z-index: 11;
+   display: flex;
+   flex-direction: column;
+   transition:left 0.4s ease-in;
+}
+.aside_open aside{
+   left:0;
+}
+aside header{
+   background: linear-gradient(#DD5E46,#B34C39);
+   flex:0.35;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+
+}
+aside header img{
+   width: 108px;
+   height: 108px;
+}
+aside header h1{
+   color:#fff;
+   font-size: 21px;
+   margin-top: 15px;
+}
+
+aside .aside_content{
+   flex:1;
+   display: flex;
+   align-content: space-between;
+   flex-wrap: wrap;
+}
+aside .aside_content  >*{
+   width: 100%;
+}
+.aside_content .categories li{
+  height: 76px;
+  padding: 0 15px;
+  line-height: 76px;
+}
+.aside_content .categories li:hover{
+   background: rgba(0,0,0,.7);
+}
+.aside_content .categories li a{
+   color:#fff;
+   display: block;
+   border-bottom:1px solid rgba(0,0,0,.7);
+ }
+.aside_links a{
+   color:rgba(255,255,255,.6);
+   font-size: 24px;
+   position: relative;
+}
+.aside_links{
+   display: flex;
+   justify-content: space-between;
+   padding: 0 15px;
+   margin-bottom: 15px;
+}
+.aside_links a span{
+   width: 20px;
+   height: 20px;
+   background: #3f539c;
+   border:1px solid #b2bad7;
+   border-radius: 50%;
+   position: absolute;
+   right:-10px;
+   top:-10px;
+   font-size: 7px;
+   text-align: center;
+   line-height: 18px;
+}
 
 /* --------  category ------- */ 
 
